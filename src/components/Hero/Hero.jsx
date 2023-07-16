@@ -1,7 +1,7 @@
-import React from "react";
+import { HeroSection } from "./Hero.styled";
 
-const Hero = () => {
-  return <div>Hero</div>;
+const Hero = ({ section1Ref }) => {
+  return <HeroSection ref={section1Ref}></HeroSection>;
 };
 
 export default Hero;

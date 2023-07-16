@@ -21,6 +21,7 @@ html {
 
 body {
     margin: 0;
+    position: relative;
   
   &::-webkit-scrollbar-track {
    
@@ -91,7 +92,7 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  min-height: 97vh;
+  /* min-height: 97vh; */
   /* padding-top: 42px; */
   /* padding-bottom: 100px; */
 
