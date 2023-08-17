@@ -7,6 +7,7 @@ const Header = ({
   scrollToSection2,
   scrollToSection3,
   scrollToSection4,
+  scrollToSection5,
 }) => {
   return (
     <StyledHeader>
@@ -17,6 +18,7 @@ const Header = ({
             <li onClick={scrollToSection2}>Церква це...</li>
             <li onClick={scrollToSection3}>Про нас</li>
             <li onClick={scrollToSection4}>Наші служіння</li>
+            <li onClick={scrollToSection5}>Контакти</li>
           </StyledList>
         </nav>
       </Container>
