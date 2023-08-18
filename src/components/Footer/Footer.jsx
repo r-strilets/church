@@ -59,7 +59,7 @@ export const Footer = ({ section5Ref }) => {
               </li>
               <li>
                 <SocialListItemLink
-                  href="https://www.youtube.com/"
+                  href="https://www.youtube.com/@nazarenevn"
                   target="_blank"
                 >
                   <FaYoutube fill="white" />
