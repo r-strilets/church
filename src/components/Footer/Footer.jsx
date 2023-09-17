@@ -1,4 +1,5 @@
 import { Container } from "../../utils/GlobalStyle";
+import { ModalWindow } from "../ModalWindow/ModalWindow";
 import {
   StyledSection,
   FooterList,
@@ -14,8 +15,16 @@ import Logo from "../../images/logo_white_transparent.png";
 import { FaYoutube } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
+import { useState } from "react";
 
 export const Footer = ({ section5Ref }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
   return (
     <StyledSection ref={section5Ref}>
       <Container>
@@ -31,19 +40,21 @@ export const Footer = ({ section5Ref }) => {
                   </ContactsLink>
                 </li>
                 <li>
-                  <ContactsLink href="tel:+380000000000">
-                    +380000000000
+                  <ContactsLink href="tel:+380638576515">
+                    +380638576515
                   </ContactsLink>
                 </li>
               </ContactsList>
             </ContactsBlock>
           </li>
           <SocialBlock>
-            <p>слідкуйте за нами у соц.мережах</p>
+            <p style={{ textTransform: "uppercase" }}>
+              слідкуйте за нами у соц.мережах
+            </p>
             <SocialList>
               <li>
                 <SocialListItemLink
-                  href="https://www.facebook.com/"
+                  href="https://www.facebook.com/nazarenevn"
                   target="_blank"
                 >
                   <FaSquareFacebook fill="white" />
@@ -51,7 +62,7 @@ export const Footer = ({ section5Ref }) => {
               </li>
               <li>
                 <SocialListItemLink
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/jesusnazarene_ch_vn/"
                   target="_blank"
                 >
                   <BsInstagram fill="white" />
@@ -59,7 +70,7 @@ export const Footer = ({ section5Ref }) => {
               </li>
               <li>
                 <SocialListItemLink
-                  href="https://www.youtube.com/"
+                  href="https://www.youtube.com/@nazarenevn"
                   target="_blank"
                 >
                   <FaYoutube fill="white" />
@@ -68,10 +79,13 @@ export const Footer = ({ section5Ref }) => {
             </SocialList>
           </SocialBlock>
           <li>
-            <SupportButton>Підтримати служіння</SupportButton>
+            <SupportButton type="button" onClick={openModal}>
+              Підтримати служіння
+            </SupportButton>
           </li>
         </FooterList>
       </Container>
+      {modalIsOpen && <ModalWindow closeModal={closeModal} />}
     </StyledSection>
   );
 };

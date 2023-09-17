@@ -50,10 +50,12 @@ export const SocialListItemLink = styled.a`
 `;
 
 export const SupportButton = styled.button`
+  font-weight: 500;
   background-color: #e9dede;
   border: none;
-  width: 150px;
+  width: 180px;
   border-radius: 40px;
-  padding: 4px 20px;
+  padding: 15px 20px;
+  text-transform: uppercase;
   word-wrap: break-word;
 `;
