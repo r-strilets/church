@@ -44,6 +44,7 @@ function App() {
       <AboutUs section3Ref={section3Ref} />
       <OurServings section4Ref={section4Ref} />
       <Footer section5Ref={section5Ref} />
+      <div id="modal-root"></div>
     </>
   );
 }
